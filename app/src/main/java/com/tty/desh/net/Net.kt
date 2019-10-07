@@ -5,6 +5,7 @@ import android.app.Activity
 import android.app.Application
 import android.os.Handler
 import androidx.fragment.app.Fragment
+import com.tty.desh.model.User
 
 import kotlinx.android.synthetic.*
 import kotlinx.coroutines.GlobalScope
@@ -115,4 +116,14 @@ object Net {
         return data
     }
 
+    var comUser = ComUser()
+
+    class ComUser: UserNet {
+        override fun login(name: String, password: String): NetResult<User> {
+            if (name == "test" && password == "123456"){
+                return NetResult(OK, "ok", "登录成功", User(10042, "test", "测试账号", "token-test", "2019-09-18 16:00", true))
+            }
+        }
+
+    }
 }

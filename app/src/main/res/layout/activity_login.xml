@@ -115,10 +115,4 @@
             app:layout_constraintStart_toEndOf="@id/button_new"
             app:layout_constraintTop_toTopOf="@id/button_new" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="12312"
-            app:layout_constraintBottom_toBottomOf="parent"/>
-
     </androidx.constraintlayout.widget.ConstraintLayout>
